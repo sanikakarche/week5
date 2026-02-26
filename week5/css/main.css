@@ -1,0 +1,173 @@
+:root {
+  --primary: #5f6fff;
+  --secondary: #7b2ff7;
+  --dark: #0f0f1a;
+  --light: #ffffff;
+  --text-dark: #222;
+  --text-light: #f5f5f5;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* DARK MODE */
+.theme-dark {
+  background: var(--dark);
+  color: var(--text-light);
+}
+
+/* HEADER */
+.header {
+  position: fixed;
+  width: 100%;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(10px);
+  padding: 1rem 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+}
+
+.theme-dark .header {
+  background: rgba(15,15,26,0.9);
+}
+
+.header__logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav__link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: var(--primary);
+  bottom: -5px;
+  left: 0;
+  transition: 0.3s;
+}
+
+.nav__link:hover::after {
+  width: 100%;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 10%;
+  color: white;
+}
+
+.hero__title {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero__subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* BUTTON */
+.btn {
+  padding: 0.8rem 1.6rem;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn--primary {
+  background: white;
+  color: var(--primary);
+}
+
+.btn--primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* SECTIONS */
+.section {
+  padding: 6rem 10%;
+}
+
+.section:nth-child(even) {
+  background: #f7f9ff;
+}
+
+.theme-dark .section:nth-child(even) {
+  background: #181828;
+}
+
+.section__title {
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+/* PROJECT GRID */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* CARD */
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  transition: 0.4s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.theme-dark .card {
+  background: #1e1e2f;
+}
+
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+/* CONTACT CENTER */
+.section--center {
+  text-align: center;
+}

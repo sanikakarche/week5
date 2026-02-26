@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanika | Advanced Portfolio</title>
+
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body class="theme-light">
+
+<header class="header">
+  <div class="header__container">
+    <h1 class="header__logo">Sanika.dev</h1>
+
+    <nav class="nav">
+      <a class="nav__link" href="#about">About</a>
+      <a class="nav__link" href="#projects">Projects</a>
+      <a class="nav__link" href="#contact">Contact</a>
+    </nav>
+
+    <button id="themeToggle" class="btn btn--small">Theme</button>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__content">
+      <h2 class="hero__title">Frontend Developer</h2>
+      <p class="hero__subtitle">
+        Building modern, responsive and performance-optimized web experiences.
+      </p>
+      <a href="#projects" class="btn btn--primary">View My Work</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <h2 class="section__title">About Me</h2>
+    <p class="section__text">
+      I specialize in CSS Grid, Flexbox, performance optimization and clean UI architecture.
+    </p>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <h2 class="section__title">Projects</h2>
+
+    <div class="portfolio-grid">
+      <div class="card">
+        <h3>Business Website</h3>
+        <p>Responsive multi-page website with deployment.</p>
+      </div>
+
+      <div class="card">
+        <h3>Landing Page</h3>
+        <p>High-conversion product layout with animations.</p>
+      </div>
+
+      <div class="card">
+        <h3>CSS Grid Gallery</h3>
+        <p>Advanced grid layout with modern UI effects.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section--center">
+    <h2 class="section__title">Contact</h2>
+    <button class="btn btn--primary">Email Me</button>
+  </section>
+
+</main>
+
+<script src="js/theme-switcher.js"></script>
+</body>
+</html>
